@@ -1,0 +1,12 @@
+<div *ngFor="let task of tasks">
+    <ng-template #taskDetailsModal let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Task Details</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Subject:</strong> {{ task.subject }}</p>
+          <p><strong>User:</strong> {{ task.user?.name }}</p>
+          <input type="checkbox" [(ngModel)]="task.status" />
+        </div>
+      </ng-template>
+  </div>
